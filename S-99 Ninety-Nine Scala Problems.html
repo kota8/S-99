@@ -13522,13 +13522,16 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">sys.process._</span>
 
 <span class="k">val</span> <span class="n">cmd</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">&quot;jupyter&quot;</span><span class="o">,</span> <span class="s">&quot;nbconvert&quot;</span><span class="o">,</span> <span class="s">&quot;--to=html&quot;</span><span class="o">,</span> <span class="s">&quot;S-99 Ninety-Nine Scala Problems.ipynb&quot;</span><span class="o">)</span>
 <span class="n">cmd</span><span class="o">.!!</span>
+
+<span class="k">val</span> <span class="n">cmd2</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">&quot;jupyter&quot;</span><span class="o">,</span> <span class="s">&quot;nbconvert&quot;</span><span class="o">,</span> <span class="s">&quot;--to=markdown&quot;</span><span class="o">,</span> <span class="s">&quot;S-99 Ninety-Nine Scala Problems.ipynb&quot;</span><span class="o">)</span>
+<span class="n">cmd2</span><span class="o">.!!</span>
 </pre></div>
 
 </div>
@@ -13547,13 +13550,15 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook S-99 Ninety-Nine Scala Problems.ipynb to html
 [NbConvertApp] Writing 457066 bytes to S-99 Ninety-Nine Scala Problems.html
+[NbConvertApp] Converting notebook S-99 Ninety-Nine Scala Problems.ipynb to markdown
+[NbConvertApp] Writing 34929 bytes to S-99 Ninety-Nine Scala Problems.md
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13568,7 +13573,14 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
   <span class="ansi-green-fg">&#34;--to=html&#34;</span>,
   <span class="ansi-green-fg">&#34;S-99 Ninety-Nine Scala Problems.ipynb&#34;</span>
 )
-<span class="ansi-cyan-fg">res12_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
+<span class="ansi-cyan-fg">res14_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
+<span class="ansi-cyan-fg">cmd2</span>: <span class="ansi-green-fg">Seq</span>[<span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">List</span>(
+  <span class="ansi-green-fg">&#34;jupyter&#34;</span>,
+  <span class="ansi-green-fg">&#34;nbconvert&#34;</span>,
+  <span class="ansi-green-fg">&#34;--to=markdown&#34;</span>,
+  <span class="ansi-green-fg">&#34;S-99 Ninety-Nine Scala Problems.ipynb&#34;</span>
+)
+<span class="ansi-cyan-fg">res14_4</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
 </div>
 
 </div>
