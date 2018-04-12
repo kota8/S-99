@@ -14246,7 +14246,7 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">not</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Boolean</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">!</span><span class="n">a</span>
@@ -14283,6 +14283,73 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">p
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+truth table for `a &amp;&amp; (a || b)`
+A     B     result
+true  true  true  
+true  false true  
+false true  false 
+false false false 
+
+truth table for `a xor b`
+A     B     result
+true  true  false 
+true  false true  
+false true  true  
+false false false 
+
+truth table for `a -&gt; b`
+A     B     result
+true  true  true  
+true  false false 
+false true  true  
+false false true  
+
+truth table for `a &lt;-&gt; b`
+A     B     result
+true  true  true  
+true  false false 
+false true  false 
+false false true  
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[104]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">not</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">and</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">or</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">nand</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">xor</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">impl</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">equ</span>
+<span class="ansi-cyan-fg">res103_7</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span>
+<span class="ansi-cyan-fg">res103_8</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">false</span>
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">table2</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -14302,7 +14369,7 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">implicit</span> <span class="k">class</span> <span class="nc">P47</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Boolean</span><span class="o">)</span> <span class="o">{</span>
@@ -14319,6 +14386,41 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">p
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A     B     result
+true  true  true  
+true  false true  
+false true  false 
+false false false 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[105]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">P47</span></pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14352,7 +14454,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">lazy</span> <span class="k">val</span> <span class="n">gray</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">List</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span> <span class="o">{</span>
@@ -14364,6 +14466,27 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[106]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">gray</span>: <span class="ansi-green-fg">Stream</span>[<span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">String</span>]] = <span class="ansi-green-fg">&lt;lazy&gt;</span>
+<span class="ansi-cyan-fg">res105_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">&#34;000&#34;</span>, <span class="ansi-green-fg">&#34;001&#34;</span>, <span class="ansi-green-fg">&#34;010&#34;</span>, <span class="ansi-green-fg">&#34;011&#34;</span>, <span class="ansi-green-fg">&#34;100&#34;</span>, <span class="ansi-green-fg">&#34;101&#34;</span>, <span class="ansi-green-fg">&#34;110&#34;</span>, <span class="ansi-green-fg">&#34;111&#34;</span>)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14383,7 +14506,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">object</span> <span class="nc">P50</span> <span class="o">{</span>
@@ -14434,6 +14557,34 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[107]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">P50</span>
+<span class="ansi-cyan-fg">res106_1</span>: <span class="ansi-green-fg">List</span>[(<span class="ansi-green-fg">String</span>, <span class="ansi-green-fg">String</span>)] = <span class="ansi-yellow-fg">List</span>(
+  (<span class="ansi-green-fg">&#34;a&#34;</span>, <span class="ansi-green-fg">&#34;0&#34;</span>),
+  (<span class="ansi-green-fg">&#34;b&#34;</span>, <span class="ansi-green-fg">&#34;101&#34;</span>),
+  (<span class="ansi-green-fg">&#34;c&#34;</span>, <span class="ansi-green-fg">&#34;100&#34;</span>),
+  (<span class="ansi-green-fg">&#34;d&#34;</span>, <span class="ansi-green-fg">&#34;111&#34;</span>),
+  (<span class="ansi-green-fg">&#34;e&#34;</span>, <span class="ansi-green-fg">&#34;1101&#34;</span>),
+  (<span class="ansi-green-fg">&#34;f&#34;</span>, <span class="ansi-green-fg">&#34;1100&#34;</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -14447,7 +14598,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Tree</span><span class="o">[</span><span class="kt">+T</span><span class="o">]</span>
@@ -14467,6 +14618,30 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[108]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Tree</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Node</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">End</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Node</span>
+<span class="ansi-cyan-fg">res107_4</span>: <span class="ansi-green-fg">wrapper</span>.<span class="ansi-green-fg">wrapper</span>.<span class="ansi-green-fg">Node</span>[<span class="ansi-green-fg">Char</span>] = T(a T(b T(d . .) T(e . .)) T(c . T(f T(g . .) .)))</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14510,7 +14685,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="c1">// Use object name `P55` so that the object is not overwritten </span>
@@ -14549,6 +14724,33 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[109]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">P55</span>
+<span class="ansi-cyan-fg">res108_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Node</span>[<span class="ansi-green-fg">String</span>]] = <span class="ansi-yellow-fg">List</span>(
+  T(x T(x . .) T(x . T(x . .))),
+  T(x T(x . .) T(x T(x . .) .)),
+  T(x T(x . T(x . .)) T(x . .)),
+  T(x T(x T(x . .) .) T(x . .))
+)
+<span class="ansi-cyan-fg">res108_2</span>: <span class="ansi-green-fg">Int</span> = <span class="ansi-green-fg">4</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -14564,7 +14766,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">implicit</span> <span class="k">class</span> <span class="nc">p56</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">tree</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span> <span class="o">{</span>
@@ -14595,6 +14797,32 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[110]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">p56</span>
+<span class="ansi-cyan-fg">res109_1</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span>
+<span class="ansi-cyan-fg">res109_2</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">false</span>
+<span class="ansi-cyan-fg">res109_3</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">false</span>
+<span class="ansi-cyan-fg">res109_4</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span>
+<span class="ansi-cyan-fg">res109_5</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span>
+<span class="ansi-cyan-fg">res109_6</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span></pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14631,7 +14859,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">implicit</span> <span class="k">class</span> <span class="nc">P57</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">tree</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span> <span class="o">{</span>
@@ -14673,6 +14901,32 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[114]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">P57</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">P57</span>
+<span class="ansi-cyan-fg">res113_2</span>: <span class="ansi-green-fg">Tree</span>[<span class="ansi-green-fg">Int</span>] = T(2 . .)
+<span class="ansi-cyan-fg">res113_3</span>: <span class="ansi-green-fg">Tree</span>[<span class="ansi-green-fg">Int</span>] = T(2 . T(3 . .))
+<span class="ansi-cyan-fg">res113_4</span>: <span class="ansi-green-fg">Tree</span>[<span class="ansi-green-fg">Int</span>] = T(2 T(0 . .) T(3 . .))
+<span class="ansi-cyan-fg">res113_5</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">true</span>
+<span class="ansi-cyan-fg">res113_6</span>: <span class="ansi-green-fg">Boolean</span> = <span class="ansi-green-fg">false</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -14688,7 +14942,7 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">object</span> <span class="nc">P58</span> <span class="o">{</span>
@@ -14704,10 +14958,109 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[112]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">P58</span>
+<span class="ansi-cyan-fg">res111_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Node</span>[<span class="ansi-green-fg">String</span>]] = <span class="ansi-yellow-fg">List</span>(T(x T(x . T(x . .)) T(x T(x . .) .)), T(x T(x T(x . .) .) T(x . T(x . .))))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="P59-(**)-Construct-height-balanced-binary-trees.">P59 (**) Construct height-balanced binary trees.<a class="anchor-link" href="#P59-(**)-Construct-height-balanced-binary-trees.">&#182;</a></h3><p>In a height-balanced binary tree, the following property holds for every node: The height of its left subtree and the height of its right subtree are almost equal, which means their difference is not greater than one.</p>
+<p>Write a method Tree.hbalTrees to construct height-balanced binary trees for a given height with a supplied value for the nodes. The function should generate all solutions.</p>
+<div class="highlight"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="nc">Tree</span><span class="o">.</span><span class="n">hbalTrees</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">&quot;x&quot;</span><span class="o">)</span>
+<span class="n">res0</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Node</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.)</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.))</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.)</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.))),</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.)</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.))</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="n">T</span><span class="o">(</span><span class="n">x</span> <span class="o">.</span> <span class="o">.)</span> <span class="o">.)),</span> <span class="o">...</span>
+</pre></div>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">object</span> <span class="nc">P59</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">hbalTrees</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">h</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">value</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Node</span><span class="o">[</span><span class="kt">T</span><span class="o">]]</span> <span class="k">=</span> <span class="o">{</span> 
+    <span class="k">lazy</span> <span class="k">val</span> <span class="n">hbals</span><span class="k">:</span> <span class="kt">Stream</span><span class="o">[</span><span class="kt">List</span><span class="o">[</span><span class="kt">Node</span><span class="o">[</span><span class="kt">T</span><span class="o">]]]</span> <span class="k">=</span> <span class="o">{</span>
+      <span class="nc">List</span><span class="o">(</span><span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">))</span> <span class="o">#::</span> 
+        <span class="nc">List</span><span class="o">(</span><span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">),</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">)),</span>
+             <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">),</span> <span class="nc">End</span><span class="o">),</span> 
+             <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="nc">End</span><span class="o">,</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">)))</span> <span class="o">#::</span>
+        <span class="n">hbals</span><span class="o">.</span><span class="n">zip</span><span class="o">(</span><span class="n">hbals</span><span class="o">.</span><span class="n">tail</span><span class="o">).</span><span class="n">map</span> <span class="o">{</span> <span class="k">case</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="k">=&gt;</span> 
+          <span class="o">{</span> <span class="k">for</span> <span class="o">{</span><span class="n">left</span> <span class="k">&lt;-</span> <span class="n">b</span><span class="o">;</span> <span class="n">right</span> <span class="k">&lt;-</span> <span class="n">b</span><span class="o">}</span> <span class="k">yield</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span> <span class="o">}</span> <span class="o">:::</span>
+            <span class="o">{</span> <span class="k">for</span> <span class="o">{</span><span class="n">left</span> <span class="k">&lt;-</span> <span class="n">b</span><span class="o">;</span> <span class="n">right</span> <span class="k">&lt;-</span> <span class="n">a</span><span class="o">}</span> <span class="k">yield</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span> <span class="o">}</span> <span class="o">:::</span>
+            <span class="o">{</span> <span class="k">for</span> <span class="o">{</span><span class="n">left</span> <span class="k">&lt;-</span> <span class="n">a</span><span class="o">;</span> <span class="n">right</span> <span class="k">&lt;-</span> <span class="n">b</span><span class="o">}</span> <span class="k">yield</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span> <span class="o">}</span> 
+        <span class="o">}</span>
+    <span class="o">}</span>    
+    <span class="n">hbals</span><span class="o">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span>  
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">P59</span><span class="o">.</span><span class="n">hbalTrees</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">&quot;x&quot;</span><span class="o">)</span>
+<span class="n">P59</span><span class="o">.</span><span class="n">hbalTrees</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">&quot;x&quot;</span><span class="o">).</span><span class="n">size</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[122]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">P59</span>
+<span class="ansi-cyan-fg">res121_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Node</span>[<span class="ansi-green-fg">String</span>]] = <span class="ansi-yellow-fg">List</span>(
+  T(x T(x T(x . .) T(x . .)) T(x T(x . .) T(x . .))),
+  T(x T(x T(x . .) T(x . .)) T(x T(x . .) .)),
+  T(x T(x T(x . .) T(x . .)) T(x . T(x . .))),
+  T(x T(x T(x . .) .) T(x T(x . .) T(x . .))),
+  T(x T(x T(x . .) .) T(x T(x . .) .)),
+  T(x T(x T(x . .) .) T(x . T(x . .))),
+  T(x T(x . T(x . .)) T(x T(x . .) T(x . .))),
+  T(x T(x . T(x . .)) T(x T(x . .) .)),
+  T(x T(x . T(x . .)) T(x . T(x . .))),
+  T(x T(x T(x . .) T(x . .)) T(x . .)),
+  T(x T(x T(x . .) .) T(x . .)),
+<span class="ansi-yellow-fg">...</span>
+<span class="ansi-cyan-fg">res121_2</span>: <span class="ansi-green-fg">Int</span> = <span class="ansi-green-fg">15</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">sys.process._</span>
@@ -14717,6 +15070,47 @@ n = 3: C(3) = ("000", "001", "011", "010", "110", "111", "101", "100").</code></
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[NbConvertApp] Converting notebook S-99 Ninety-Nine Scala Problems.ipynb to html
+[NbConvertApp] Writing 578306 bytes to S-99 Ninety-Nine Scala Problems.html
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[113]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">sys.process._
+
+</span>
+<span class="ansi-cyan-fg">cmd</span>: <span class="ansi-green-fg">Seq</span>[<span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">List</span>(
+  <span class="ansi-green-fg">&#34;jupyter&#34;</span>,
+  <span class="ansi-green-fg">&#34;nbconvert&#34;</span>,
+  <span class="ansi-green-fg">&#34;--to=html&#34;</span>,
+  <span class="ansi-green-fg">&#34;S-99 Ninety-Nine Scala Problems.ipynb&#34;</span>
+)
+<span class="ansi-cyan-fg">res112_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
