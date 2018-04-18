@@ -16562,7 +16562,7 @@ Our example tree would be represented in Lisp as <code>(a (f g) c (b d e))</code
       <span class="k">val</span> <span class="o">(</span><span class="n">subtrees</span><span class="o">,</span> <span class="n">z</span><span class="o">)</span> <span class="k">=</span> <span class="n">getSubtrees</span><span class="o">(</span><span class="n">y</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">tail</span><span class="o">)</span>
       <span class="o">(</span><span class="nc">MTree</span><span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">subtrees</span><span class="o">),</span> <span class="n">z</span><span class="o">)</span>  
     <span class="o">}</span>
-    <span class="k">case</span> <span class="sc">&#39; &#39;</span> <span class="k">=&gt;</span> <span class="n">getTree</span><span class="o">(</span><span class="n">y</span><span class="o">.</span><span class="n">tail</span><span class="o">)</span> <span class="c1">// there is anothe sibling</span>
+    <span class="k">case</span> <span class="sc">&#39; &#39;</span> <span class="k">=&gt;</span> <span class="n">getTree</span><span class="o">(</span><span class="n">y</span><span class="o">.</span><span class="n">tail</span><span class="o">)</span> <span class="c1">// there is another sibling</span>
     <span class="k">case</span> <span class="n">h</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="nc">MTree</span><span class="o">(</span><span class="n">h</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">),</span> <span class="n">y</span><span class="o">.</span><span class="n">tail</span><span class="o">)</span> <span class="c1">// node with no subtree</span>
   <span class="o">}</span> 
   <span class="k">def</span> <span class="n">getSubtrees</span><span class="o">(</span><span class="n">y</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">List</span><span class="o">[</span><span class="kt">MTree</span><span class="o">[</span><span class="kt">Char</span><span class="o">]],</span> <span class="nc">String</span><span class="o">)</span> <span class="k">=</span> <span class="n">y</span><span class="o">.</span><span class="n">head</span> <span class="k">match</span> <span class="o">{</span>
@@ -16635,7 +16635,7 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="c1">// create HTML version in docs/ folder</span>
@@ -16664,14 +16664,14 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook S-99 Ninety-Nine Scala Problems.ipynb to html
-[NbConvertApp] Writing 792357 bytes to index.html
+[NbConvertApp] Writing 793257 bytes to index.html
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[70]:</div>
+<div class="prompt output_prompt">Out[71]:</div>
 
 
 
@@ -16680,9 +16680,9 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 <pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">sys.process._
 
 </span>
-<span class="ansi-cyan-fg">res69_1</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
-<span class="ansi-cyan-fg">res69_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
-<span class="ansi-cyan-fg">res69_3</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
+<span class="ansi-cyan-fg">res70_1</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
+<span class="ansi-cyan-fg">res70_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
+<span class="ansi-cyan-fg">res70_3</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
 </div>
 
 </div>
