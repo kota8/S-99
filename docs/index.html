@@ -11714,6 +11714,20 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    .CodeMirror pre, .output pre {
+  font-family: "Inconsolata", "Ubuntu Mono", "Courier";
+}
+
+div.text_cell_render {
+  font-family: "Calibri";
+}
+
+div.text_cell_render code {
+  font-family: "Inconsolata", "Ubuntu Mono", "Courier";
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -11858,7 +11872,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">penultimate</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">x</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="n">x</span> <span class="k">match</span> <span class="o">{</span>
-  <span class="k">case</span> <span class="nc">Nil</span> <span class="o">|</span> <span class="k">_</span> <span class="o">::</span> <span class="nc">Nil</span>  <span class="k">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">NoSuchElementException</span><span class="o">(</span><span class="s">&quot;penultimate with list shorter than 2&quot;</span><span class="o">)</span>
+  <span class="k">case</span> <span class="nc">Nil</span> <span class="o">|</span> <span class="k">_</span> <span class="o">::</span> <span class="nc">Nil</span>  <span class="k">=&gt;</span> 
+    <span class="k">throw</span> <span class="k">new</span> <span class="nc">NoSuchElementException</span><span class="o">(</span><span class="s">&quot;penultimate with list shorter than 2&quot;</span><span class="o">)</span>
   <span class="k">case</span> <span class="n">a1</span> <span class="o">::</span> <span class="n">a2</span> <span class="o">::</span> <span class="nc">Nil</span> <span class="k">=&gt;</span> <span class="n">a1</span>
   <span class="k">case</span> <span class="n">a</span> <span class="o">::</span> <span class="n">as</span>         <span class="k">=&gt;</span> <span class="n">penultimate</span><span class="o">(</span><span class="n">as</span><span class="o">)</span>
 <span class="o">}</span>
@@ -13082,7 +13097,7 @@ The order of the elements should not be changed.</p>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">randomSelect</span>
-<span class="ansi-cyan-fg">res22_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Symbol</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">&#39;a</span>, <span class="ansi-green-fg">&#39;d</span>, <span class="ansi-green-fg">&#39;f</span>)</pre>
+<span class="ansi-cyan-fg">res22_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Symbol</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">&#39;a</span>, <span class="ansi-green-fg">&#39;d</span>, <span class="ansi-green-fg">&#39;g</span>)</pre>
 </div>
 
 </div>
@@ -13129,7 +13144,7 @@ The order of the elements should not be changed.</p>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">lotto</span>
-<span class="ansi-cyan-fg">res23_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">34</span>, <span class="ansi-green-fg">43</span>, <span class="ansi-green-fg">38</span>, <span class="ansi-green-fg">41</span>, <span class="ansi-green-fg">27</span>, <span class="ansi-green-fg">2</span>)</pre>
+<span class="ansi-cyan-fg">res23_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">22</span>, <span class="ansi-green-fg">17</span>, <span class="ansi-green-fg">47</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">13</span>, <span class="ansi-green-fg">39</span>)</pre>
 </div>
 
 </div>
@@ -13177,7 +13192,7 @@ The order of the elements should not be changed.</p>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">randomPermute</span>
-<span class="ansi-cyan-fg">res24_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Symbol</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">&#39;c</span>, <span class="ansi-green-fg">&#39;b</span>, <span class="ansi-green-fg">&#39;e</span>, <span class="ansi-green-fg">&#39;d</span>, <span class="ansi-green-fg">&#39;a</span>, <span class="ansi-green-fg">&#39;f</span>)</pre>
+<span class="ansi-cyan-fg">res24_1</span>: <span class="ansi-green-fg">List</span>[<span class="ansi-green-fg">Symbol</span>] = <span class="ansi-yellow-fg">List</span>(<span class="ansi-green-fg">&#39;a</span>, <span class="ansi-green-fg">&#39;b</span>, <span class="ansi-green-fg">&#39;d</span>, <span class="ansi-green-fg">&#39;c</span>, <span class="ansi-green-fg">&#39;f</span>, <span class="ansi-green-fg">&#39;e</span>)</pre>
 </div>
 
 </div>
@@ -13993,8 +14008,8 @@ $$</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Elapsed time: 2.822754ms
-Elapsed time: 0.72804ms
+<pre>Elapsed time: 55.199469ms
+Elapsed time: 7.595437ms
 </pre>
 </div>
 </div>
@@ -16633,9 +16648,518 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Graphs">Graphs<a class="anchor-link" href="#Graphs">&#182;</a></h2><p>A graph is defined as a set of nodes and a set of edges, where each edge is a pair of nodes.</p>
+<p><img src="images/graph1.gif"></p>
+<p>The class to represent a graph is mutable, which isn't in keeping with pure functional programming, but a pure functional data structure would make things much, much more complicated. [Pure functional graphs with cycles require laziness; I think Scala can handle it, but I think that would add too much of a barrier to the following questions.</p>
+<p>Our Graphs use an incidence list internally. Each has a list of nodes and a list of edges. Each node also has a list of edges that connect it to other nodes. In a directed graph, nodes that are the target of arcs do not have references to those arcs in their adjacency list.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">GraphBase</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="k">class</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">n1</span><span class="k">:</span> <span class="kt">Node</span><span class="o">,</span> <span class="n">n2</span><span class="k">:</span> <span class="kt">Node</span><span class="o">,</span> <span class="n">value</span><span class="k">:</span> <span class="kt">U</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">toTuple</span> <span class="k">=</span> <span class="o">(</span><span class="n">n1</span><span class="o">.</span><span class="n">value</span><span class="o">,</span> <span class="n">n2</span><span class="o">.</span><span class="n">value</span><span class="o">,</span> <span class="n">value</span><span class="o">)</span>
+  <span class="o">}</span>
+  <span class="k">case</span> <span class="k">class</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">var</span> <span class="n">adj</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Edge</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Nil</span>
+    <span class="k">def</span> <span class="n">neighbors</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Node</span><span class="o">]</span> <span class="k">=</span> <span class="n">adj</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">edgeTarget</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="k">this</span><span class="o">).</span><span class="n">get</span><span class="o">)</span>
+  <span class="o">}</span>
+
+  <span class="k">var</span> <span class="n">nodes</span><span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">Node</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Map</span><span class="o">()</span>
+  <span class="k">var</span> <span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Edge</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Nil</span>
+
+  <span class="c1">// If the edge E connects N to another node, returns the other node,</span>
+  <span class="c1">// otherwise returns None.</span>
+  <span class="k">def</span> <span class="n">edgeTarget</span><span class="o">(</span><span class="n">e</span><span class="k">:</span> <span class="kt">Edge</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Node</span><span class="o">)</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Node</span><span class="o">]</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">equals</span><span class="o">(</span><span class="n">o</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span> <span class="k">=</span> <span class="n">o</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="cm">/*  </span>
+<span class="cm">    case g: GraphBase[T,U] =&gt; (nodes.keys.toList -- g.nodes.keys.toList == Nil &amp;&amp;</span>
+<span class="cm">                               edges.map(_.toTuple) -- g.edges.map(_.toTuple) == Nil)</span>
+<span class="cm">    // got error: value -- is not a member of List[T]                           </span>
+<span class="cm">    */</span>
+    <span class="k">case</span> <span class="n">g</span><span class="k">:</span> <span class="kt">GraphBase</span><span class="o">[</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="o">((</span><span class="n">nodes</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">toList</span> <span class="n">diff</span> <span class="n">g</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">toList</span><span class="o">)</span> <span class="o">==</span> <span class="nc">Nil</span> <span class="o">&amp;&amp;</span>
+                               <span class="o">(</span><span class="n">edges</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">toTuple</span><span class="o">)</span> <span class="n">diff</span> <span class="n">g</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">toTuple</span><span class="o">))</span> <span class="o">==</span> <span class="nc">Nil</span><span class="o">)</span>
+  
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="kc">false</span>
+  <span class="o">}</span>
+
+  <span class="k">def</span> <span class="n">addNode</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">n</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">value</span><span class="o">)</span>
+    <span class="n">nodes</span> <span class="k">=</span> <span class="nc">Map</span><span class="o">(</span><span class="n">value</span> <span class="o">-&gt;</span> <span class="n">n</span><span class="o">)</span> <span class="o">++</span> <span class="n">nodes</span>
+    <span class="n">n</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Graph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="nc">extends</span> <span class="nc">GraphBase</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">equals</span><span class="o">(</span><span class="n">o</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span> <span class="k">=</span> <span class="n">o</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Graph</span><span class="o">[</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="k">super</span><span class="o">.</span><span class="n">equals</span><span class="o">(</span><span class="n">g</span><span class="o">)</span>
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="kc">false</span>
+  <span class="o">}</span>
+
+  <span class="k">def</span> <span class="n">edgeTarget</span><span class="o">(</span><span class="n">e</span><span class="k">:</span> <span class="kt">Edge</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Node</span><span class="o">)</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Node</span><span class="o">]</span> <span class="k">=</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n1</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="nc">Some</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n2</span><span class="o">)</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n2</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="nc">Some</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n1</span><span class="o">)</span>
+    <span class="k">else</span> <span class="nc">None</span>
+
+  <span class="k">def</span> <span class="n">addEdge</span><span class="o">(</span><span class="n">n1</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">n2</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">value</span><span class="k">:</span> <span class="kt">U</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">e</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">nodes</span><span class="o">(</span><span class="n">n1</span><span class="o">),</span> <span class="n">nodes</span><span class="o">(</span><span class="n">n2</span><span class="o">),</span> <span class="n">value</span><span class="o">)</span>
+    <span class="n">edges</span> <span class="k">=</span> <span class="n">e</span> <span class="o">::</span> <span class="n">edges</span>
+    <span class="n">nodes</span><span class="o">(</span><span class="n">n1</span><span class="o">).</span><span class="n">adj</span> <span class="k">=</span> <span class="n">e</span> <span class="o">::</span> <span class="n">nodes</span><span class="o">(</span><span class="n">n1</span><span class="o">).</span><span class="n">adj</span>
+    <span class="n">nodes</span><span class="o">(</span><span class="n">n2</span><span class="o">).</span><span class="n">adj</span> <span class="k">=</span> <span class="n">e</span> <span class="o">::</span> <span class="n">nodes</span><span class="o">(</span><span class="n">n2</span><span class="o">).</span><span class="n">adj</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Digraph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="nc">extends</span> <span class="nc">GraphBase</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">equals</span><span class="o">(</span><span class="n">o</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span> <span class="k">=</span> <span class="n">o</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">g</span><span class="k">:</span> <span class="kt">Digraph</span><span class="o">[</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="k">super</span><span class="o">.</span><span class="n">equals</span><span class="o">(</span><span class="n">g</span><span class="o">)</span>
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="kc">false</span>
+  <span class="o">}</span>
+
+  <span class="k">def</span> <span class="n">edgeTarget</span><span class="o">(</span><span class="n">e</span><span class="k">:</span> <span class="kt">Edge</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Node</span><span class="o">)</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Node</span><span class="o">]</span> <span class="k">=</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n1</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="nc">Some</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="n">n2</span><span class="o">)</span>
+    <span class="k">else</span> <span class="nc">None</span>
+
+  <span class="k">def</span> <span class="n">addArc</span><span class="o">(</span><span class="n">source</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">dest</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">value</span><span class="k">:</span> <span class="kt">U</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">e</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Edge</span><span class="o">(</span><span class="n">nodes</span><span class="o">(</span><span class="n">source</span><span class="o">),</span> <span class="n">nodes</span><span class="o">(</span><span class="n">dest</span><span class="o">),</span> <span class="n">value</span><span class="o">)</span>
+    <span class="n">edges</span> <span class="k">=</span> <span class="n">e</span> <span class="o">::</span> <span class="n">edges</span>
+    <span class="n">nodes</span><span class="o">(</span><span class="n">source</span><span class="o">).</span><span class="n">adj</span> <span class="k">=</span> <span class="n">e</span> <span class="o">::</span> <span class="n">nodes</span><span class="o">(</span><span class="n">source</span><span class="o">).</span><span class="n">adj</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[70]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">GraphBase</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Graph</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Digraph</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The full initial Graph code, which also includes objects for creating graphs, is in <a href="http://aperiodic.net/phil/scala/s-99/graph1.scala">graph1.scala</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">GraphObjBase</span> <span class="o">{</span>
+  <span class="k">type</span> <span class="kt">GraphClass</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+  <span class="k">def</span> <span class="n">addLabel</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">T</span><span class="o">)])</span> <span class="k">=</span>
+    <span class="n">edges</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">v</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="n">_1</span><span class="o">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_2</span><span class="o">,</span> <span class="o">()))</span>
+  <span class="k">def</span> <span class="n">term</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span> <span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">T</span><span class="o">)])</span> <span class="k">=</span>
+    <span class="n">termLabel</span><span class="o">(</span><span class="n">nodes</span><span class="o">,</span> <span class="n">addLabel</span><span class="o">(</span><span class="n">edges</span><span class="o">))</span>
+  <span class="k">def</span> <span class="n">termLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span> <span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">T</span>,<span class="kt">U</span><span class="o">)])</span><span class="k">:</span> <span class="kt">GraphClass</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+  <span class="k">def</span> <span class="n">addAdjacentLabel</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">])])</span> <span class="k">=</span>
+    <span class="n">nodes</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">a</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="n">_1</span><span class="o">,</span> <span class="n">a</span><span class="o">.</span><span class="n">_2</span><span class="o">.</span><span class="n">map</span><span class="o">((</span><span class="k">_</span><span class="o">,</span> <span class="o">()))))</span>
+  <span class="k">def</span> <span class="n">adjacent</span><span class="o">[</span><span class="kt">T</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">])])</span> <span class="k">=</span>
+    <span class="n">adjacentLabel</span><span class="o">(</span><span class="n">addAdjacentLabel</span><span class="o">(</span><span class="n">nodes</span><span class="o">))</span>
+  <span class="k">def</span> <span class="n">adjacentLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">)])])</span><span class="k">:</span> <span class="kt">GraphClass</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+<span class="o">}</span>
+  
+<span class="k">object</span> <span class="nc">Graph</span> <span class="k">extends</span> <span class="nc">GraphObjBase</span> <span class="o">{</span>
+  <span class="k">type</span> <span class="kt">GraphClass</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Graph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+
+  <span class="k">def</span> <span class="n">termLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span> <span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">T</span>,<span class="kt">U</span><span class="o">)])</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">g</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Graph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+    <span class="n">nodes</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">g</span><span class="o">.</span><span class="n">addNode</span><span class="o">)</span>
+    <span class="n">edges</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">v</span> <span class="k">=&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">addEdge</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="n">_1</span><span class="o">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_2</span><span class="o">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_3</span><span class="o">))</span>
+    <span class="n">g</span>
+  <span class="o">}</span>
+  <span class="k">def</span> <span class="n">adjacentLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">)])])</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">g</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Graph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+    <span class="k">for</span> <span class="o">((</span><span class="n">v</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">nodes</span><span class="o">)</span> <span class="n">g</span><span class="o">.</span><span class="n">addNode</span><span class="o">(</span><span class="n">v</span><span class="o">)</span>
+    <span class="k">for</span> <span class="o">((</span><span class="n">n1</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">nodes</span><span class="o">;</span> <span class="o">(</span><span class="n">n2</span><span class="o">,</span> <span class="n">l</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(!</span><span class="n">g</span><span class="o">.</span><span class="n">nodes</span><span class="o">(</span><span class="n">n1</span><span class="o">).</span><span class="n">neighbors</span><span class="o">.</span><span class="n">contains</span><span class="o">(</span><span class="n">g</span><span class="o">.</span><span class="n">nodes</span><span class="o">(</span><span class="n">n2</span><span class="o">)))</span>
+        <span class="n">g</span><span class="o">.</span><span class="n">addEdge</span><span class="o">(</span><span class="n">n1</span><span class="o">,</span> <span class="n">n2</span><span class="o">,</span> <span class="n">l</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="n">g</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+  
+  <span class="k">object</span> <span class="nc">Digraph</span> <span class="k">extends</span> <span class="nc">GraphObjBase</span> <span class="o">{</span>
+    <span class="k">type</span> <span class="kt">GraphClass</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Digraph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+
+    <span class="k">def</span> <span class="n">termLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span> <span class="n">edges</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">T</span>,<span class="kt">U</span><span class="o">)])</span> <span class="k">=</span> <span class="o">{</span>
+      <span class="k">val</span> <span class="n">g</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Digraph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+      <span class="n">nodes</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">g</span><span class="o">.</span><span class="n">addNode</span><span class="o">)</span>
+      <span class="n">edges</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">v</span> <span class="k">=&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">addArc</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="n">_1</span><span class="o">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_2</span><span class="o">,</span> <span class="n">v</span><span class="o">.</span><span class="n">_3</span><span class="o">))</span>
+      <span class="n">g</span>
+    <span class="o">}</span>
+    <span class="k">def</span> <span class="n">adjacentLabel</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">](</span><span class="n">nodes</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">List</span><span class="o">[(</span><span class="kt">T</span>,<span class="kt">U</span><span class="o">)])])</span> <span class="k">=</span> <span class="o">{</span>
+      <span class="k">val</span> <span class="n">g</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Digraph</span><span class="o">[</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">]</span>
+      <span class="k">for</span> <span class="o">((</span><span class="n">n</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">nodes</span><span class="o">)</span> <span class="n">g</span><span class="o">.</span><span class="n">addNode</span><span class="o">(</span><span class="n">n</span><span class="o">)</span>
+      <span class="k">for</span> <span class="o">((</span><span class="n">s</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">nodes</span><span class="o">;</span> <span class="o">(</span><span class="n">d</span><span class="o">,</span> <span class="n">l</span><span class="o">)</span> <span class="k">&lt;-</span> <span class="n">a</span><span class="o">)</span> <span class="n">g</span><span class="o">.</span><span class="n">addArc</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">d</span><span class="o">,</span> <span class="n">l</span><span class="o">)</span>
+      <span class="n">g</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[71]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">GraphObjBase</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Graph</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Digraph</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are a few ways to create a graph from primitives. The graph-term form lists the nodes and edges separately:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Graph</span><span class="o">.</span><span class="n">term</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="sc">&#39;c&#39;</span><span class="o">,</span> <span class="sc">&#39;d&#39;</span><span class="o">,</span> <span class="sc">&#39;f&#39;</span><span class="o">,</span> <span class="sc">&#39;g&#39;</span><span class="o">,</span> <span class="sc">&#39;h&#39;</span><span class="o">,</span> <span class="sc">&#39;k&#39;</span><span class="o">),</span>
+           <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="sc">&#39;c&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="sc">&#39;f&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;c&#39;</span><span class="o">,</span> <span class="sc">&#39;f&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;f&#39;</span><span class="o">,</span> <span class="sc">&#39;k&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;g&#39;</span><span class="o">,</span> <span class="sc">&#39;h&#39;</span><span class="o">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res71</span>: <span class="ansi-green-fg">Graph</span>.<span class="ansi-green-fg">GraphClass</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Unit</span>] = $sess.cmd69Wrapper$Helper$Graph@421563df</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The adjacency-list form associates each node with its adjacent nodes. In an undirected graph, care must be taken to ensure that all links are symmetric; if <code>b</code> is adjacent to <code>c</code>, <code>c</code> must also be adjacent to <code>b</code>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Graph</span><span class="o">.</span><span class="n">adjacent</span><span class="o">(</span><span class="nc">List</span><span class="o">((</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;c&#39;</span><span class="o">,</span> <span class="sc">&#39;f&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;c&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="sc">&#39;f&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;d&#39;</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">),</span>
+                    <span class="o">(</span><span class="sc">&#39;f&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;b&#39;</span><span class="o">,</span> <span class="sc">&#39;c&#39;</span><span class="o">,</span> <span class="sc">&#39;k&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;g&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;h&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;h&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;g&#39;</span><span class="o">)),</span>
+                    <span class="o">(</span><span class="sc">&#39;k&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;f&#39;</span><span class="o">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[73]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res72</span>: <span class="ansi-green-fg">Graph</span>.<span class="ansi-green-fg">GraphClass</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Unit</span>] = $sess.cmd69Wrapper$Helper$Graph@3a23f900</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The representations we introduced so far are bound to our implementation and therefore well suited for automated processing, but their syntax is not very user-friendly. Typing the terms by hand is cumbersome and error-prone. We can define a more compact and "human-friendly" notation as follows: A graph is represented by a string of terms of the type <code>X</code> or <code>Y-Z</code> separated by commas. The standalone terms stand for isolated nodes, the <code>Y-Z</code> terms describe edges. If an <code>X</code> appears as an endpoint of an edge, it is automatically defined as a node. Our example could be written as:</p>
+
+<pre><code>[b-c, f-c, g-h, d, f-b, k-f, h-g]</code></pre>
+<p>We call this the human-friendly form. As the example shows, the list does not have to be sorted and may even contain the same edge multiple times. Notice the isolated node <code>d</code>.</p>
+<p>When the edges of a graph are directed, we call them arcs. These are represented by ordered pairs. Such a graph is called directed graph. To represent a directed graph, the forms discussed above are slightly modified. The example graph opposite is represented as follows:</p>
+<p><img src="images/graph2.gif">
+graph-term form:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Digraph</span><span class="o">.</span><span class="n">term</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="sc">&#39;r&#39;</span><span class="o">,</span> <span class="sc">&#39;s&#39;</span><span class="o">,</span> <span class="sc">&#39;t&#39;</span><span class="o">,</span> <span class="sc">&#39;u&#39;</span><span class="o">,</span> <span class="sc">&#39;v&#39;</span><span class="o">),</span>
+             <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;s&#39;</span><span class="o">,</span> <span class="sc">&#39;r&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;s&#39;</span><span class="o">,</span> <span class="sc">&#39;u&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;u&#39;</span><span class="o">,</span> <span class="sc">&#39;r&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;u&#39;</span><span class="o">,</span> <span class="sc">&#39;s&#39;</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;v&#39;</span><span class="o">,</span> <span class="sc">&#39;u&#39;</span><span class="o">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res73</span>: <span class="ansi-green-fg">Digraph</span>.<span class="ansi-green-fg">GraphClass</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Unit</span>] = $sess.cmd69Wrapper$Helper$Digraph@2812f497</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>adjacency-list form:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Digraph</span><span class="o">.</span><span class="n">adjacent</span><span class="o">(</span><span class="nc">List</span><span class="o">((</span><span class="sc">&#39;r&#39;</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;s&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;r&#39;</span><span class="o">,</span> <span class="sc">&#39;u&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;t&#39;</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">),</span>
+                      <span class="o">(</span><span class="sc">&#39;u&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;r&#39;</span><span class="o">,</span> <span class="sc">&#39;s&#39;</span><span class="o">)),</span> <span class="o">(</span><span class="sc">&#39;v&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">(</span><span class="sc">&#39;u&#39;</span><span class="o">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res74</span>: <span class="ansi-green-fg">Digraph</span>.<span class="ansi-green-fg">GraphClass</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Unit</span>] = $sess.cmd69Wrapper$Helper$Digraph@2486f6c1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(Note that the adjacency-list form is the same for graphs and digraphs.)</p>
+<p>human-friendly form:</p>
+
+<pre><code>[s&gt;r, t, u&gt;r, s&gt;u, u&gt;s, v&gt;u]</code></pre>
+<p>Finally, graphs and digraphs may have additional information attached to nodes and edges (arcs). For the nodes, this is no problem, as we can put any type into them. On the other hand, for edges we have to extend our notation. Graphs with additional information attached to edges are called labeled graphs.</p>
+<p><img src="images/graph3.gif"></p>
+<p>graph-term form:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Digraph</span><span class="o">.</span><span class="n">termLabel</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="sc">&#39;k&#39;</span><span class="o">,</span> <span class="sc">&#39;m&#39;</span><span class="o">,</span> <span class="sc">&#39;p&#39;</span><span class="o">,</span> <span class="sc">&#39;q&#39;</span><span class="o">),</span>
+                  <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;m&#39;</span><span class="o">,</span> <span class="sc">&#39;q&#39;</span><span class="o">,</span> <span class="mi">7</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;p&#39;</span><span class="o">,</span> <span class="sc">&#39;m&#39;</span><span class="o">,</span> <span class="mi">5</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;p&#39;</span><span class="o">,</span> <span class="sc">&#39;q&#39;</span><span class="o">,</span> <span class="mi">9</span><span class="o">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[76]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res75</span>: <span class="ansi-green-fg">Digraph</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Int</span>] = $sess.cmd69Wrapper$Helper$Digraph@7a95087f</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>adjacency-list form:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Digraph</span><span class="o">.</span><span class="n">adjacentLabel</span><span class="o">(</span>
+  <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;k&#39;</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;m&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;q&#39;</span><span class="o">,</span> <span class="mi">7</span><span class="o">))),</span> <span class="o">(</span><span class="sc">&#39;p&#39;</span><span class="o">,</span> <span class="nc">List</span><span class="o">((</span><span class="sc">&#39;m&#39;</span><span class="o">,</span> <span class="mi">5</span><span class="o">),</span> <span class="o">(</span><span class="sc">&#39;q&#39;</span><span class="o">,</span> <span class="mi">9</span><span class="o">))),</span>
+       <span class="o">(</span><span class="sc">&#39;q&#39;</span><span class="o">,</span> <span class="nc">Nil</span><span class="o">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res76</span>: <span class="ansi-green-fg">Digraph</span>[<span class="ansi-green-fg">Char</span>, <span class="ansi-green-fg">Int</span>] = $sess.cmd69Wrapper$Helper$Digraph@556e09c9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>human-friendly form:</p>
+
+<pre><code>[p&gt;q/9, m&gt;q/7, k, p&gt;m/5]</code></pre>
+<p>The notation for labeled graphs can also be used for so-called multi-graphs, where more than one edge (or arc) is allowed between two given nodes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="P80-(***)-Conversions.">P80 (***) Conversions.<a class="anchor-link" href="#P80-(***)-Conversions.">&#182;</a></h3><p>Write methods to generate the graph-term and adjacency-list forms from a Graph. Write another method to output the human-friendly form for a graph. Make it the toString method for Graph. Write more functions to create graphs from strings.</p>
+<p>Hint: You might need separate functions for labeled and unlabeled graphs.</p>
+<div class="highlight"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="nc">Graph</span><span class="o">.</span><span class="n">fromString</span><span class="o">(</span><span class="s">&quot;[b-c, f-c, g-h, d, f-b, k-f, h-g]&quot;</span><span class="o">).</span><span class="n">toTermForm</span>
+<span class="n">res0</span><span class="k">:</span> <span class="o">(</span><span class="kt">List</span><span class="o">[</span><span class="kt">String</span><span class="o">],</span> <span class="nc">List</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">String</span>, <span class="kt">Unit</span><span class="o">)])</span> <span class="k">=</span> <span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="n">d</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span> <span class="n">c</span><span class="o">,</span> <span class="n">f</span><span class="o">,</span> <span class="n">g</span><span class="o">,</span> <span class="n">b</span><span class="o">),</span><span class="nc">List</span><span class="o">((</span><span class="n">h</span><span class="o">,</span><span class="n">g</span><span class="o">,()),</span> <span class="o">(</span><span class="n">k</span><span class="o">,</span><span class="n">f</span><span class="o">,()),</span> <span class="o">(</span><span class="n">f</span><span class="o">,</span><span class="n">b</span><span class="o">,()),</span> <span class="o">(</span><span class="n">g</span><span class="o">,</span><span class="n">h</span><span class="o">,()),</span> <span class="o">(</span><span class="n">f</span><span class="o">,</span><span class="n">c</span><span class="o">,()),</span> <span class="o">(</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">,())))</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="nc">Digraph</span><span class="o">.</span><span class="n">fromStringLabel</span><span class="o">(</span><span class="s">&quot;[p&gt;q/9, m&gt;q/7, k, p&gt;m/5]&quot;</span><span class="o">).</span><span class="n">toAdjacentForm</span>
+<span class="n">res1</span><span class="k">:</span> <span class="kt">List</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">List</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">)])]</span> <span class="k">=</span> <span class="nc">List</span><span class="o">((</span><span class="n">m</span><span class="o">,</span><span class="nc">List</span><span class="o">((</span><span class="n">q</span><span class="o">,</span><span class="mi">7</span><span class="o">))),</span> <span class="o">(</span><span class="n">p</span><span class="o">,</span><span class="nc">List</span><span class="o">((</span><span class="n">m</span><span class="o">,</span><span class="mi">5</span><span class="o">),</span> <span class="o">(</span><span class="n">q</span><span class="o">,</span><span class="mi">9</span><span class="o">))),</span> <span class="o">(</span><span class="n">k</span><span class="o">,</span><span class="nc">List</span><span class="o">()),</span> <span class="o">(</span><span class="n">q</span><span class="o">,</span><span class="nc">List</span><span class="o">()))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="c1">// create HTML version in docs/ folder</span>
@@ -16664,14 +17188,14 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook S-99 Ninety-Nine Scala Problems.ipynb to html
-[NbConvertApp] Writing 793258 bytes to index.html
+[NbConvertApp] Writing 804128 bytes to index.html
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[73]:</div>
+<div class="prompt output_prompt">Out[78]:</div>
 
 
 
@@ -16680,9 +17204,9 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">l
 <pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">sys.process._
 
 </span>
-<span class="ansi-cyan-fg">res72_1</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
-<span class="ansi-cyan-fg">res72_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
-<span class="ansi-cyan-fg">res72_3</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
+<span class="ansi-cyan-fg">res77_1</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
+<span class="ansi-cyan-fg">res77_2</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span>
+<span class="ansi-cyan-fg">res77_3</span>: <span class="ansi-green-fg">String</span> = <span class="ansi-green-fg">&#34;&#34;</span></pre>
 </div>
 
 </div>
